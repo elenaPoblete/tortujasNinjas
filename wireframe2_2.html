@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Wireframe</title>
+<script type="text/javascript" src="js/jquery-latest.js"></script>
+<style>
+body    {
+   background-image: url(img/forest.jpg);
+}
+</style>
+
+<script language="javascript">
+
+ function cargar_imagen1(imagen) {
+  var img = document.getElementById("ImagenJugadorUno");
+  var img_dir = "img/";
+  if (img) {
+   img.src = img_dir + imagen;
+  }
+ }
+ 
+ function cargar_imagen2(imagen) {
+  var img = document.getElementById("ImagenJugadorDos");
+  var img_dir = "img/";
+  if (img) {
+   img.src = img_dir + imagen;
+  }
+ }
+ 
+  function fondo(id) {  
+ 
+  if (id =='beach') {
+   $('body').css('background-image', 'url(img/beach.jpg)');
+  }
+  if (id =='forest') {
+   $('body').css('background-image', 'url(img/forest.jpg)');
+  }
+  if (id =='snow') {
+   $('body').css('background-image', 'url(img/snow.jpg)');
+  }
+  if (id =='earth') {
+   $('body').css('background-image', 'url(img/earth.jpg)');
+  }
+    if (id =='dojo') {
+   $('body').css('background-image', 'url(img/dojo.jpg)');
+  }
+    if (id =='matrix') {
+   $('body').css('background-image', 'url(img/matrix.jpg)');
+  }
+ }
+
+</script>
+</head>
+<body id="fondo">
+<table bgcolor="black" width="" border="1" align="center" bordercolor="#0000FF" cellspacing="10" cellpadding="10">
+<tr>
+<td align="center" colspan="2">
+<p style="font-family: Montserrat,sans-serif; color:yellow; text-align: center;
+font-size: 22px;">Select Players</p>
+</td>
+</tr>
+	<tr>
+		<td align="center">
+		<select align="center" name="imagenes1" onchange="cargar_imagen1(this.value)">
+		<option value="Select">Select Ninja</option>
+		 <option value="leo.png">Leonardo</option>
+		 <option value="raphael.png">Rafael</option>
+		 <option value="mikey.png">Miguel Angel</option>
+		 <option value="donny.png">Donatelo</option>
+		</select>			
+		</td> 
+		<td align="center">
+		<select align="center" name="imagenes2" onchange="cargar_imagen2(this.value)">
+		<option value="Select">Select Ninja</option>
+		 <option value="leo.png">Leonardo</option>
+		 <option value="raphael.png">Rafael</option>
+		 <option value="mikey.png">Miguel Angel</option>
+		 <option value="donny.png">Donatelo</option>
+		</select>
+		</td> 		
+	</tr>
+</table>
+<table width="100%" border="0" align="" cellspacing="10" cellpadding="10">
+<tr>
+</tr>
+	<tr>
+		<td>
+		<img align="left" src="" id="ImagenJugadorUno"/>		
+		</td> 
+		<td>
+		<img align="right" src="" id="ImagenJugadorDos"/>
+		</td> 		
+	</tr>
+</table>
+</body>
+</html> 
